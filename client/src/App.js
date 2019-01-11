@@ -4,6 +4,7 @@ import GMap from './components/GMap'
 import Burger from './components/Burger';
 // import Feed from './components/Feed'
 import LocationSearch from './components/LocationSearch';
+import PidgeonMap from './components/PidgeonMap';
 import './styles/App.css';
 
 class App extends Component {
@@ -19,7 +20,8 @@ class App extends Component {
         {/* <Feed> */}
         <Burger/>
         <LocationSearch/>
-        <GMap/>
+        {/* <GMap/> */}
+        <PidgeonMap/>
       </div>
     );
   }
