@@ -10,16 +10,12 @@ class Feed extends Component {
     }
 
     componentDidMount() {
-        axios.get('https://api.iextrading.com/1.0/stock/GOOG/chart/1m')
-        .then(res => {
-            console.log(res)
-        })
     }
 
     render() {
         return (
             <div>
-                Feeeeeed
+                Feedeededd
             </div>
         );
     }
