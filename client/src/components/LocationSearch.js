@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
@@ -8,10 +8,15 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import DirectionsIcon from '@material-ui/icons/Directions';
-import '../styles/LocationSearch.css';
 
 const styles = {
   root: {
+    "margin": '3em 0px 0px 5em',
+    "position": "absolute",
+    "transform": "translate(-50%)",
+    "left": "20%",
+    "width": "27%",
+    'z-index': 10,
     padding: '2px 4px',
     display: 'flex',
     alignItems: 'center',
@@ -31,28 +36,38 @@ const styles = {
   },
 };
 
-function LocationSearch(props) {
-  const { classes } = props;
+class LocationSearch extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      searchText: ""
+    }
+  }
 
-  return (
-    <Paper className={classes.root} elevation={1}>
-      <IconButton className={classes.iconButton} aria-label="Menu">
-        <MenuIcon />
-      </IconButton>
-      <InputBase className={classes.input} placeholder="Search Google Maps" />
-      <IconButton className={classes.iconButton} aria-label="Search">
-        <SearchIcon />
-      </IconButton>
-      <Divider className={classes.divider} />
-      <IconButton color="primary" className={classes.iconButton} aria-label="Directions">
-        <DirectionsIcon />
-      </IconButton>
-    </Paper>
-  );
+  render() {
+  const { classes } = this.props;
+    return (
+        <Paper className={classes.root} elevation={1}>
+          <IconButton className={classes.iconButton} aria-label="Menu">
+          </IconButton>
+
+        {/* this is the input portion */}
+          <InputBase className={classes.input} placeholder="Search OurNYC" />
+
+          <IconButton className={classes.iconButton} aria-label="Search">
+            <SearchIcon />
+          </IconButton>
+          <Divider className={classes.divider} />
+          <IconButton color="primary" className={classes.iconButton} aria-label="Directions">
+            <DirectionsIcon />
+          </IconButton>
+        </Paper>
+    );
+  }
 }
 
-LocationSearch.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
+    LocationSearch.propTypes = {
+      classes: PropTypes.object.isRequired,
+    };
 
-export default withStyles(styles)(LocationSearch);
+    export default withStyles(styles)(LocationSearch);

@@ -1,12 +1,3 @@
-.location-search {
-  margin: 5em 0px 0px 5em;
-  position: absolute;
-  transform: translate(-50%);
-  left: 35%;
-  width: 35%;
-  z-index: 10;
-}
-
 .map {
   z-index: 1;
 }
