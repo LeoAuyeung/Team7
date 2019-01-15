@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import Map from './components/Map'
+import GMap from './components/GMap'
 import Burger from './components/Burger';
 // import Feed from './components/Feed'
-// import LocationSearch from './components/LocationSearch';
+import LocationSearch from './components/LocationSearch';
+// import PidgeonMap from './components/PidgeonMap';
+import LeafletMap from './components/LeafletMap';
 import './styles/App.css';
 
 class App extends Component {
@@ -16,10 +18,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        {/* <Feed> */}
         <Burger/>
-        <input type="text" className="location-search"/>
-        {/* <LocationSearch/> */}
-        <Map/>
+        <LocationSearch root="location-search"/>
+        {/* <GMap/> */}
+        {/* <PidgeonMap/> */}
+        <LeafletMap/>
       </div>
     );
   }
