@@ -11,7 +11,7 @@ import DirectionsIcon from '@material-ui/icons/Directions';
 
 const styles = {
   root: {
-    "margin": '3em 0px 0px 5em',
+    "margin": '2.8em 0px 0px 5em',
     "position": "absolute",
     "transform": "translate(-50%)",
     "left": "20%",
@@ -66,8 +66,8 @@ class LocationSearch extends Component {
   }
 }
 
-    LocationSearch.propTypes = {
-      classes: PropTypes.object.isRequired,
-    };
+LocationSearch.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
 
-    export default withStyles(styles)(LocationSearch);
+export default withStyles(styles)(LocationSearch);

@@ -6,8 +6,8 @@
     height: 25px;
     /* left: 36px;
     top: 36px; */
-    left: 18px;
-    top: 18px;
+    left: 3vw;
+    top: 10vh;
 }
 
 @media (max-width: 48em){
@@ -29,7 +29,6 @@
 .bm-cross {
     background: #bdc3c7;
 }
-
 
 .menu{
     width: 250px !important;
