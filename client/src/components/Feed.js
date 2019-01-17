@@ -11,21 +11,21 @@ class Feed extends Component {
     }
 
     componentDidMount() {
-        fetch(`https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=${encodeURIComponent(this.props.city)}`)
-        .then(res => res.json())
-        .then(data => {
-            let m = data.query.pages;
-            let summary = m[Object.keys(m)[0]].extract;
-            this.setState({ summary })
-        })
-        .catch(err => console.error(err))
+        // fetch(`https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=${encodeURIComponent(this.props.city)}`)
+        // .then(res => res.json())
+        // .then(data => {
+        //     let m = data.query.pages;
+        //     let summary = m[Object.keys(m)[0]].extract;
+        //     this.setState({ summary })
+        // })
+        // .catch(err => console.error(err))
     }
 
     render() {
         return (
             <div>
                 <h1> {this.props.city} </h1>
-                <p> {this.state.summary} </p>
+                <p> This is a city </p>
             </div>
         );
     }
