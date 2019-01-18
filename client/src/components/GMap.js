@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import GoogleMapReact from 'google-map-react';
-import geojson from '../static/Neighborhood Tabulation Areas.geojson'
 
 const Point = ({text}) => <h1> {text} </h1>
 
