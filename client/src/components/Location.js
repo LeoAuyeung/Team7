@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Feed from './Feed'
-import { GeoJSON, TileLayer, Tooltip, Popup } from "react-leaflet";
+import { GeoJSON, Tooltip, Popup } from "react-leaflet";
 
 class Location extends Component {
     constructor(props) {
@@ -29,11 +29,12 @@ class Location extends Component {
         };
     };
     render() {
+        const cityName = this.props.data.features[0].properties.ntaname;
         return (
             <GeoJSON data={this.props.data} style={this.getStyle}>
-            {/*<Tooltip>A tooltip</Tooltip>*/}
+                <Tooltip>{cityName}</Tooltip>
                 <Popup onOpen={() => {}}>
-                    <Feed city={this.props.data.features[0].properties.ntaname}/>
+                    <Feed city={cityName}/>
                 </Popup>
             </GeoJSON> 
         );
