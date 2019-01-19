@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Map, GeoJSON, TileLayer, Tooltip, Popup } from "react-leaflet";
 import "./LeafletMap.css"
 import "leaflet/dist/leaflet.css";
-import Feed from './Feed';
 import geojson from '../static/g.json';
 import Location from './Location'
 
