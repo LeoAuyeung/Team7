@@ -25,7 +25,7 @@ class Feed extends Component {
         return (
             <div>
                 <h1> {this.props.city} </h1>
-                <p> This is a city </p>
+                <p> {this.props.description} </p>
             </div>
         );
     }
