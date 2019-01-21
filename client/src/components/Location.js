@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { GeoJSON, Tooltip, Popup } from "react-leaflet";
 import citiesInfo from '../static/cities.json';
 import Feed from './Feed'
+import DataPie from './Pie'
 
 class Location extends Component {
     constructor(props) {
@@ -31,13 +32,15 @@ class Location extends Component {
     };
     render() {
         const cityName = this.props.data.features[0].properties.ntaname;
-        const desc = citiesInfo[cityName]['description']; //citiesInfo 
+        const desc = citiesInfo[cityName]['description']; //citiesInfo
+        const demographics = citiesInfo[cityName]['demographics'];
 
         return (
             <GeoJSON data={this.props.data} style={this.getStyle}>
                 <Tooltip>{cityName}</Tooltip>
                 <Popup onOpen={() => {}}>
                     <Feed city={cityName} description={desc}/>
+                    <DataPie demographics={demographics}/>
                 </Popup>
             </GeoJSON> 
         );
