@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import Burger from './components/Burger';
-import LocationSearch from './components/LocationSearch';
 import LeafletMap from './components/LeafletMap';
+import LocationSearch from './components/LocationSearch';
 import './styles/App.css';
 
 class App extends Component {
@@ -16,7 +15,9 @@ class App extends Component {
     return (
       <div className="App">
         <Burger/>
+        {/*LocationSearch == Search bar*/}
         <LocationSearch root="location-search"/>
+        {/*LeafletMap == Rendered map of NYC with boroughs*/}
         <LeafletMap/>
       </div>
     );
