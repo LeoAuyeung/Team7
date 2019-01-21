@@ -7,6 +7,11 @@ class DataPie extends Component {
     }
 
     render() {
+        if(!this.props.demographics.length){
+            return (
+                <div></div>
+            );
+        }
         return (
             <div>
             <h3>Demographics:</h3>
