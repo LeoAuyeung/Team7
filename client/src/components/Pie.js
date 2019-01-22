@@ -27,6 +27,7 @@ class DataPie extends Component {
                     radialLabelsLinkColor="inherit"
                     radialLabelsLinkStrokeWidth={3}
                     radialLabelsTextColor="inherit:darker(1.2)"
+                    enableSlicesLabels={false}
                 />
             </div>
         );
