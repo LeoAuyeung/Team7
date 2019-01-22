@@ -7,22 +7,15 @@ class DataPie extends Component {
     }
 
     render() {
-        if(!this.props.demographics.length){
-            return (
-                <div></div>
-            );
-        }
         return (
             <div>
             <h3>Demographics:</h3>
             <Pie
-                width={300}
+                width={200}
                 height={250}
                 margin={{
                     top: 0,
-                    right: 60,
                     bottom: 0,
-                    left: 60
                 }}
                 data={this.props.demographics}
                 animate

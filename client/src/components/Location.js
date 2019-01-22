@@ -3,6 +3,7 @@ import { GeoJSON, Tooltip, Popup } from "react-leaflet";
 import citiesInfo from '../static/cities.json';
 import Feed from './Feed'
 import DataPie from './Pie'
+import '../styles/Location.css'
 
 class Location extends Component {
     constructor(props) {
@@ -34,13 +35,35 @@ class Location extends Component {
         const cityName = this.props.data.features[0].properties.ntaname;
         const desc = citiesInfo[cityName]['description']; //citiesInfo
         const demographics = citiesInfo[cityName]['demographics'];
+        const imageUrl = citiesInfo[cityName]['imageUrl'];
 
         return (
             <GeoJSON data={this.props.data} style={this.getStyle}>
                 <Tooltip>{cityName}</Tooltip>
-                <Popup onOpen={() => {}}>
-                    <Feed city={cityName} description={desc}/>
-                    <DataPie demographics={demographics}/>
+                <Popup 
+                    maxWidth={580}
+                    keepInView={true}
+                    className="popup" onOpen={() => {}}
+                >
+                    <table>
+                        <tr>
+                            <td id="feed">
+                                <Feed city={cityName} style={{width: "50%"}} description={desc}/>
+                            </td>
+                            <td>
+                                { imageUrl ? (
+                                    <img id="imageUrl" src={imageUrl}/>
+                                ) : (
+                                    <div></div>
+                                )}
+                                { demographics.length > 0 ? (
+                                    <DataPie id="pie" demographics={demographics}/>
+                                ) : (
+                                    <div></div>
+                                )}
+                            </td>
+                        </tr>
+                    </table>
                 </Popup>
             </GeoJSON> 
         );

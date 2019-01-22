@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { slide as Menu } from 'react-burger-menu'
+import About from './About';
 import '../styles/Burger.css';
 
 class Burger extends Component {
@@ -36,6 +37,7 @@ class Burger extends Component {
                 onStateChange={(state) => this.handleStateChange(state)}
             >
             <h1>OurNYC</h1>
+                <About handlerCloseSideBar={this.handlerCloseSideBar}/>
                 <div id="social">
                     <a href="/" className="fa fa-fw fa-facebook"><span>facebook</span></a>
                     <a href="/" className="fa fa-fw fa-twitter"><span>twitter</span></a>
