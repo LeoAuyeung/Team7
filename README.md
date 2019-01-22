@@ -16,7 +16,7 @@ In the future, we want to also display the socio-economic data and include the b
   - Used Wikipedia's API and Open Street Map's API
 
 
-### Installation and how to run the site
+#### Installation and how to run the site
   *Make sure you have Node and React installed. If you don't you can install it with these commands.
   If you're using a Mac you can use Homebrew to install Node with:
 
@@ -35,3 +35,6 @@ In the future, we want to also display the socio-economic data and include the b
   $ npm start
   ```
   The program should now run on http://localhost:3000
+
+#### Here's a sample image of the website
+![alt text]("https://github.com/LeoAuyeung/Team7/blob/master/Demo.png")
