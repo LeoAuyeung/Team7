@@ -35,6 +35,9 @@ class Autocomplete extends Component {
         suggestion.toLowerCase().indexOf(userInput.toLowerCase()) > -1
     );
 
+    this.props.handleSearchText(userInput);
+    console.log(this.props)
+
     this.setState({
       activeSuggestion: 0,
       filteredSuggestions,
@@ -57,6 +60,7 @@ class Autocomplete extends Component {
 
     // User pressed the enter key
     if (e.keyCode === 13) {
+      this.props.handleSearchText(this.state.userInput);
       this.setState({
         activeSuggestion: 0,
         showSuggestions: false,
@@ -68,7 +72,6 @@ class Autocomplete extends Component {
       if (activeSuggestion === 0) {
         return;
       }
-
       this.setState({ activeSuggestion: activeSuggestion - 1 });
     }
     // User pressed the down arrow
@@ -129,6 +132,7 @@ class Autocomplete extends Component {
     return (
       <Fragment>
         <input
+          id="typeitnormally"
           type="text"
           onChange={onChange}
           onKeyDown={onKeyDown}

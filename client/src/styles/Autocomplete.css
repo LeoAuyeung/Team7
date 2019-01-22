@@ -14,6 +14,8 @@ input {
 }
 
 .suggestions {
+  top: 81%;
+  left: 8%;
   position: absolute;
   border: 1px solid #999;
   border-top-width: 0;
@@ -22,8 +24,9 @@ input {
   max-height: 143px;
   overflow-y: auto;
   padding-left: 0;
-  width: calc(300px + 1rem);
+  width: 69%;
   display: inline-block;
+  background-color: #008f68;
 }
 
 .suggestions li {
@@ -32,7 +35,6 @@ input {
 
 .suggestion-active,
 .suggestions li:hover {
-  background-color: #008f68;
   color: #fae042;
   cursor: pointer;
   font-weight: 700;
@@ -40,4 +42,8 @@ input {
 
 .suggestions li:not(:last-of-type) {
   border-bottom: 1px solid #999;
+}
+
+#typeitnormally {
+  width: 70%;
 }

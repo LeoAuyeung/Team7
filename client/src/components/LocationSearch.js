@@ -18,7 +18,7 @@ const styles = {
     "position": "absolute",
     "transform": "translate(-50%)",
     "left": "25%",
-    "width": "40%",
+    "width": "30%",
     'z-index': 999,
     padding: '2px 4px',
     display: 'flex',
@@ -45,7 +45,12 @@ class LocationSearch extends Component {
       searchText: ""
     }
   }
-  
+
+  clickLocation = () => {
+    let dummyPos = [-73,40];
+    console.log(this.state)
+    alert(`you have clicked ${this.state.searchText}`)
+  }
 
   render() {
     const { classes } = this.props;
@@ -57,18 +62,21 @@ class LocationSearch extends Component {
         </IconButton>
 
         {/* Input (autocomplete) */}
-        <Autocomplete suggestions={citiesNames} />
+        <Autocomplete handleSearchText={text => {
+          console.log(this.state)
+          console.log(`text: ${text}`)
+          this.setState({ searchText: text })
+        }} suggestions={citiesNames} />
         
         {/*Search icon logo*/}
-        <IconButton className={classes.iconButton} aria-label="Search">
+        <IconButton onClick={this.clickLocation} className={classes.iconButton} aria-label="Search">
           <SearchIcon />
         </IconButton>
         <Divider className={classes.divider} />
         {/*Directions icon logo*/}
-        <IconButton color="primary" className={classes.iconButton} aria-label="Directions">
-          <DirectionsIcon />
-        </IconButton>
-
+        {/* <IconButton color="primary" className={classes.iconButton} aria-label="Directions"> */}
+          {/* <DirectionsIcon /> */}
+        {/* </IconButton> */}
       </Paper>
     );
   }
