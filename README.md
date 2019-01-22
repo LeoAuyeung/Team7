@@ -1,7 +1,7 @@
 # OurNYC
-=========================================================================
-Creators: Miguel Acero, Leo-Auyeung, Angela Lim, and Tracey Kong
-=========================================================================
+=================================================================
+####Creators: Miguel Acero, Leo-Auyeung, Angela Lim, and Tracey Kong
+=================================================================
 OurNYC is an interactive website that uses Wikipedia's API to map information about NYC neighborhoods. The website displays a map of NYC with each neighborhood outlined. When you click on a polygon, a description of the neighborhood, a picture of part of the neighboor and it's ethnic demographics.
 
 #### Inspiration
