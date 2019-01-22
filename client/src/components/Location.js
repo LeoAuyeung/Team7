@@ -41,21 +41,24 @@ class Location extends Component {
             <GeoJSON data={this.props.data} style={this.getStyle}>
                 <Tooltip>{cityName}</Tooltip>
                 <Popup 
-                    maxWidth={580}
+                    maxWidth={600}
                     keepInView={true}
-                    className="popup" onOpen={() => {}}
+                    onOpen={() => {}}
                 >
+                    <h1> {cityName} </h1>
                     <table>
                         <tr>
                             <td id="feed">
                                 <Feed city={cityName} style={{width: "50%"}} description={desc}/>
                             </td>
                             <td>
-                                { imageUrl ? (
-                                    <img id="imageUrl" src={imageUrl}/>
-                                ) : (
-                                    <div></div>
-                                )}
+                                <div id="image">
+                                    { imageUrl ? (
+                                        <img id="imageUrl" src={imageUrl}/>
+                                    ) : (
+                                        <div></div>
+                                    )}
+                                </div>
                                 { demographics.length > 0 ? (
                                     <DataPie id="pie" demographics={demographics}/>
                                 ) : (
