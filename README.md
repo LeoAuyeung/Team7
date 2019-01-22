@@ -37,4 +37,4 @@ In the future, we want to also display the socio-economic data and include the b
   The program should now run on http://localhost:3000
 
 #### Here's a sample image of the website
-![alt text]("https://github.com/LeoAuyeung/Team7/blob/master/Demo.png")
+![alt text](https://github.com/LeoAuyeung/Team7/blob/master/Demo.png)
