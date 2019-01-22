@@ -1,11 +1,9 @@
 # OurNYC
-####Creators: Miguel Acero, Leo-Auyeung, Angela Lim, and Tracey Kong
+#### Creators: Miguel Acero, Leo-Auyeung, Angela Lim, and Tracey Kong
 
 
 #### Overview
 OurNYC is an interactive website that uses Wikipedia's API to map information about NYC neighborhoods. The website displays a map of NYC with each neighborhood outlined. When you click on a polygon, a description of the neighborhood, a picture of part of the neighborhoods and it's ethnic demographics. The site also includes an autocomplete search which will pop up the neighborhood that you search up.
-
-
 
 #### Inspiration
 We built OurNYC with the intent to teach everyone about the history each neighborhood in the city because many of us, despite living in the city for many years, has no idea about the existence of other neighborhoods. We also wanted to show where each neighborhood is and the demographics.
@@ -18,7 +16,7 @@ In the future, we want to also display the socio-economic data and include the b
   - Used Wikipedia's API and Open Street Map's API
 
 
-### Installation and how to run the site
+#### Installation and how to run the site
   *Make sure you have Node and React installed. If you don't you can install it with these commands.
   If you're using a Mac you can use Homebrew to install Node with:
 
@@ -37,3 +35,6 @@ In the future, we want to also display the socio-economic data and include the b
   $ npm start
   ```
   The program should now run on http://localhost:3000
+
+#### Here's a sample image of the website
+![alt text](https://github.com/LeoAuyeung/Team7/blob/master/Demo.png)

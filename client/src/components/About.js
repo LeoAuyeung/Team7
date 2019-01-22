@@ -34,28 +34,25 @@ class About extends Component{
             className="butn2"
             id="aboutPage"
             onClick={this.openModal}>
-            < i className="fa fa-fw fa-cloud"></i>
-            <span>About OurNYC</span>
+            <i className="fa fa-fw fa-cloud"></i>
+        <span>About OurNYC</span>
         </button>
-      <Modal
-        isOpen={this.state.modalIsOpen}
-        onAfterOpen={this.afterOpenModal}
-        onRequestClose={this.closeModal}
-        //style={customStyles}
-        contentLabel="Example Modal"
-      >
-
+        <Modal
+            onAfterOpen={this.afterOpenModal}
+            onRequestClose={this.closeModal}
+            contentLabel="Example Modal"
+        >
         <h2 ref={subtitle => this.subtitle = subtitle}>Hello</h2>
         <button onClick={this.closeModal}>close</button>
         <div>I am a modal</div>
         <form>
-          <input />
-          <button>tab navigation</button>
-          <button>stays</button>
-          <button>inside</button>
-          <button>the modal</button>
+            <input />
+            <button>tab navigation</button>
+            <button>stays</button>
+            <button>inside</button>
+            <button>the modal</button>
         </form>
-      </Modal>
+        </Modal>
     </div>
   );
  }
