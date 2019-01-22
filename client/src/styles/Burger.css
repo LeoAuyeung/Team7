@@ -42,7 +42,7 @@
     overflow-y: hidden !important;
     overflow-x: hidden !important;
 }
-   
+
 /* Morph shape necessary with bubble or elastic */
 .bm-morph-shape {
     fill: #373a47;
@@ -126,7 +126,7 @@
     text-decoration: none;
     color: #313131;
 }
-  
+
 #social p {
     margin-left: 5px;
     font-size: 10px;

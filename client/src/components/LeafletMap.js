@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Map, GeoJSON, TileLayer, Tooltip, Popup } from "react-leaflet";
-import "./LeafletMap.css"
+import "../styles/LeafletMap.css";
 import "leaflet/dist/leaflet.css";
-import geojson from '../static/g.json';
 import Location from './Location'
+import geojson from '../static/g.json';
 
 const styles = {
   fontFamily: "sans-serif",
@@ -20,7 +20,7 @@ class LeafletMap extends Component {
   }
   
   componentDidMount() {
-    console.log(geojson);
+    //console.log(geojson);
   }
 
   getStyle = (feature, layer) => {
@@ -34,12 +34,14 @@ class LeafletMap extends Component {
   };
   
   render() {
-    const cities = geojson.features.map(feature => {
+    const cities = geojson.features.map(feature => { // geojson array contains neighborhood polygon data
+      // data contains data for polygon coordinates
       const data = {
         "type": "FeatureCollection",
         "features": [feature]
       };
       return (
+        // <Location/> Component renders neighborhood polygons and popup feeds
         <Location data={data}/>
       )
     })
@@ -47,10 +49,12 @@ class LeafletMap extends Component {
     return (
       <div>
         <Map center={this.state.position} zoom={12} zoomSnap={0.25}>
+          {/*TileLayer Component renders map background*/}
           <TileLayer
             url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           />
+          {/*cities variable renders <Location/> Component*/}
           {cities}
         </Map>
       </div>
