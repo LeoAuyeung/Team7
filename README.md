@@ -1,5 +1,5 @@
 # OurNYC
-#### Creators: Miguel Acero, Leo-Auyeung, Angela Lim, and Tracey Kong
+#### Creators: Miguel Acero, Leo Au-Yeung, Angela Lim, and Tracey Kong
 
 
 #### Overview
