@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Burger from './components/Burger';
 import LeafletMap from './components/LeafletMap';
 import LocationSearch from './components/LocationSearch';
+import About from './components/About';
 import './styles/App.css';
 
 class App extends Component {

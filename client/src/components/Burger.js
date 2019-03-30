@@ -9,7 +9,7 @@ class Burger extends Component {
         this.state = {
             menuOpen: false
         }
-         this.handler = this.handler.bind(this);
+        this.handler = this.handler.bind(this);
     }
 
     handleStateChange (state) {
@@ -21,10 +21,10 @@ class Burger extends Component {
     }
 
     handler = (e) => {
-      e.preventDefault();
-      this.setState({
-          menuOpen: false
-      });
+        e.preventDefault();
+        this.setState({
+            menuOpen: false
+        });
     }
 
     showSettings (event) {

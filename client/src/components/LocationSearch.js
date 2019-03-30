@@ -19,7 +19,7 @@ const styles = {
     "transform": "translate(-50%)",
     "left": "25%",
     "width": "30%",
-    'z-index': 999,
+    'z-index': 5,
     padding: '2px 4px',
     display: 'flex',
     alignItems: 'center',
